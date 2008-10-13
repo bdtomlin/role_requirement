@@ -110,7 +110,7 @@ module RoleRequirementSystem
     
     def access_denied
       if logged_in?
-        render :nothing => true, :status => 401
+        render render :file => "#{RAILS_ROOT}/public/401.html", :status => 401
         return false
       else
         super
